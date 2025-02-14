@@ -5,6 +5,7 @@ import './App.css'
 import Header from './header'
 import Content from './content'
 import Footer from './footer'
+import Portfolio from './page'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,9 +14,9 @@ function App() {
 
 
 <> 
-<Header />
-<Content />
-<Footer />
+<Portfolio>
+  
+</Portfolio>
 </>
 
   )
