@@ -1,31 +1,31 @@
-import { Github, Linkedin, Mail, User } from "lucide-react";
+import { Github, Linkedin, Mail, User, Code, Database, Palette, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Prisma"],
+    title: "Harvest Horizon",
+    description: "A full-stack web application for beginner farmers with personalized farming recommendations",
+    technologies: ["React", "Spring Boot", "MSSQL", "Java"],
   },
   {
-    title: "AI Chat Application",
-    description: "Real-time chat application powered by artificial intelligence",
-    technologies: ["React", "Node.js", "Socket.io", "OpenAI"],
+    title: "Mobile Medical Robot",
+    description: "IoT-based robot for monitoring vital signs and surgical levels, aiding in patient care",
+    technologies: ["IoT", "Sensors", "Healthcare Tech"],
   },
   {
-    title: "Portfolio Website",
-    description: "A responsive portfolio website with dark mode support",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    title: "Web Development Projects",
+    description: "Collection of web projects including Login Page, Portfolio, and Digital Calculator",
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
 const skills = [
-  { name: "Frontend Development", level: "Advanced", icon: User },
-  { name: "Backend Development", level: "Intermediate", icon: User },
-  { name: "UI/UX Design", level: "Intermediate", icon: User },
-  { name: "DevOps", level: "Beginner", icon: User },
+  { name: "Web Development", level: "Intermediate", icon: Code },
+  { name: "Database Management", level: "Intermediate", icon: Database },
+  { name: "UI Development", level: "Intermediate", icon: Palette },
+  { name: "Backend Development", level: "Intermediate", icon: Server },
 ];
 
 function HeroSection() {
@@ -34,10 +34,10 @@ function HeroSection() {
       <div className="container mx-auto grid gap-8 md:grid-cols-2 md:gap-12">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            Hi, I'm <span className="text-primary">John Doe</span>
+            Hi, I'm <span className="text-primary">Kaviya M</span>
           </h1>
           <p className="text-xl text-muted-foreground">
-            Full Stack Developer specializing in building exceptional digital experiences
+            Full Stack Developer passionate about creating innovative digital solutions
           </p>
           <div className="flex gap-4">
             <Button>
@@ -49,7 +49,7 @@ function HeroSection() {
           </div>
         </div>
         <div className="relative aspect-square rounded-full bg-gradient-to-tr from-primary to-primary/20">
-          <img src="/placeholder.svg" alt="Profile" className="absolute inset-4 rounded-full object-cover" />
+          <img src="/kaviya.jpg" alt="Profile" className="absolute inset-4 rounded-full object-cover" />
         </div>
       </div>
     </section>
@@ -64,7 +64,7 @@ function ProjectSection() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden">
-              <img src="/placeholder.svg" alt={project.title} className="aspect-video w-full object-cover" />
+              <img src="/harvest horizon.webp" alt={project.title} className="aspect-video w-full object-cover" />
               <CardContent className="p-4">
                 <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
                 <p className="mb-4 text-sm text-muted-foreground">{project.description}</p>
@@ -113,16 +113,16 @@ function ContactSection() {
       <div className="container mx-auto text-center max-w-xl">
         <h2 className="mb-8 text-3xl font-bold">Let's Connect</h2>
         <p className="mb-8 text-muted-foreground">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          I'm always eager to learn and grow professionally. Feel free to reach out for collaborations or opportunities.
         </p>
         <div className="flex justify-center gap-4">
-          <Button>
+          <Button as="a" href="https://github.com/kaviyaM019" target="_blank">
             <Github className="mr-2 h-4 w-4" /> GitHub
           </Button>
-          <Button>
+          <Button as="a" href="https://www.linkedin.com/in/kaviyammunusamy" target="_blank">
             <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
           </Button>
-          <Button>
+          <Button as="a" href="mailto:kaviya.m19@gmail.com">
             <Mail className="mr-2 h-4 w-4" /> Email
           </Button>
         </div>
